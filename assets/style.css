@@ -28,23 +28,34 @@ footer p {
 
 .button {
     flex-basis: 25%;
-
+    /* margin: 60px; */
     /* properti pendukung */
     font-size: 1.5em;
+    font-weight: bold;
     text-align: center;
-    padding: 35px;
-    border: 1px solid black;
-    background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+    padding: 0;
+    border: none;
+    /* background: -webkit-linear-gradient(top, #d2d2d2, #ddd); */
+    background: hsl(340deg 100% 32%);
     cursor: pointer;
     border-radius: 2px;
     opacity: 100%;
     transition: 50ms;
+    border-radius: 40px;
+    margin: 10px;
+    box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.2);
+
 
 }
 
-.button:hover {
-    opacity: 50%;
+.button:hover .front {
+
     font-weight: bold;
+    transform: translateY(-6px);
+}
+
+.button:active .front {
+    transform: translateY(-2px);
 }
 
 .double {
@@ -54,24 +65,22 @@ footer p {
 .display {
     padding: 5px 50px 5px 5px;
     color: white;
-    background-color: darkslategray;
+    background-color: #9a07b8;
     font-size: 2em;
     width: 100%;
+    padding: 70px;
     border: 1px solid black;
-    border-radius: 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.operator,
-.negative,
-.equals {
-    background: orange;
-}
+
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
     /* margin-top: 2px; */
-    border-radius: 8px;
-    padding: 45px;
+    border-radius: 20px;
+
 }
 
 
@@ -86,4 +95,51 @@ footer p {
         margin: 2px auto;
         font-size: 1.5em;
     }
+}
+
+.pencetan {
+    margin-top: -20px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    padding: 20px 5px;
+    position: relative;
+    background: -webkit-linear-gradient(top, #c90af0, #32043b);
+    box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    display: block;
+    /* margin: 20px; */
+    padding: 50px;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-9px);
+    will-change: transform;
+    transition: transform 250ms;
+}
+
+.button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.clear {
+    background: blue;
+}
+
+.mbuh {
+    background: lightskyblue;
+}
+
+.operator,
+.negative,
+.equals {
+    background: darkorange;
+}
+
+.o-second,
+.n-second,
+.e-second {
+    background: yellow;
 }
