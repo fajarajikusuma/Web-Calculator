@@ -1,78 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Calculator</title>
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
 
-  <body>
-    <main>
-      <div class="flex-container-column card">
-        <div class="result">
-          <div class="display">
-            <h1 id="displayNumber">0</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Calculator</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="flex-container-column card">
+      <div class="result">
+        <div class="display">
+          <h1 id="displayNumber">0</h1>
+        </div>
+      </div>
+      <div class="pencetan">
+        <div class="flex-container-row">
+          <div class="button">
+            <span class="front">7</span>
+          </div>
+          <div class="button">
+            <span class="front">8</span>
+          </div>
+          <div class="button">
+            <span class="front">9</span>
+          </div>
+          <div class="button o-second">
+            <span class="front negative">+/-</span>
           </div>
         </div>
-        <div class="pencetan">
-          <div class="flex-container-row">
-            <div class="button">
-              <span class="front">7</span>
-            </div>
-            <div class="button">
-              <span class="front">8</span>
-            </div>
-            <div class="button">
-              <span class="front">9</span>
-            </div>
-            <div class="button o-second">
-              <span class="front negative">+/-</span>
-            </div>
+        <div class="flex-container-row">
+          <div class="button">
+            <span class="front">4</span>
           </div>
-          <div class="flex-container-row">
-            <div class="button">
-              <span class="front">4</span>
-            </div>
-            <div class="button">
-              <span class="front">5</span>
-            </div>
-            <div class="button">
-              <span class="front">6</span>
-            </div>
-            <div class="button n-second">
-              <span class="front operator">-</span>
-            </div>
+          <div class="button">
+            <span class="front">5</span>
           </div>
-          <div class="flex-container-row">
-            <div class="button">
-              <span class="front">1</span>
-            </div>
-            <div class="button">
-              <span class="front">2</span>
-            </div>
-            <div class="button">
-              <span class="front">3</span>
-            </div>
-            <div class="button o-second">
-              <span class="front operator">+</span>
-            </div>
+          <div class="button">
+            <span class="front">6</span>
           </div>
-          <div class="flex-container-row">
-            <div class="button mbuh">
-              <span class="front clear"> CE </span>
-            </div>
-            <div class="button">
-              <span class="front"> 0 </span>
-            </div>
-            <div class="button e-second double">
-              <span class="front equals"> = </span>
-            </div>
+          <div class="button n-second">
+            <span class="front operator">-</span>
+          </div>
+        </div>
+        <div class="flex-container-row">
+          <div class="button">
+            <span class="front">1</span>
+          </div>
+          <div class="button">
+            <span class="front">2</span>
+          </div>
+          <div class="button">
+            <span class="front">3</span>
+          </div>
+          <div class="button o-second">
+            <span class="front operator">+</span>
+          </div>
+        </div>
+        <div class="flex-container-row">
+          <div class="button mbuh">
+            <span class="front clear"> CE </span>
+          </div>
+          <div class="button">
+            <span class="front"> 0 </span>
+          </div>
+          <div class="button e-second double">
+            <span class="front equals"> = </span>
           </div>
         </div>
       </div>
-    </main>
-    <script src="./assets/kalkulator.js"></script>
-  </body>
+    </div>
+  </main>
+  <div class="history card">
+    <h2>Riwayat Perhitungan</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Angka Pertama</th>
+          <th>Operator</th>
+          <th>Angka Kedua</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody id="historyList"></tbody>
+    </table>
+  </div>
+  <script src="./assets/storage.js"></script>
+  <script src="./assets/kalkulator.js"></script>
+</body>
+
 </html>
